@@ -1,0 +1,351 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap');
+
+
+@mixin PageTitle {
+    font-size: 45px;
+    font-weight: bold;
+    font-family: 'Monrserrant', sans-serif;
+   letter-spacing: 2px;
+    color: white;
+    margin: 0;
+}
+
+@mixin  PageTitle2 {
+    font-size: 30px;
+    color: burlywood;
+    font-family: 'Monrserrant', sans-serif;
+    letter-spacing: .7px;
+}
+
+@mixin laptopSpecs {
+    ul {
+        a {
+            display: flex;
+            text-decoration: none;
+            cursor: pointer;
+            svg {
+                color: white !important;
+                font-size: 30px;
+                margin: 0 5px;
+                transition: .3s ease;
+            }
+            h2 {
+                font-family: 'Monrserrant', sans-serif;
+                color: white;
+                font-weight: 600;
+            }
+
+
+            &:hover svg {
+                transform: rotate(25deg);
+            }
+        }
+
+        li {
+            color: green;
+            font-family: 'Monrserrant', sans-serif;
+            margin: 20px 30px 10px;
+            font-size: 20px;
+            width: 100%;
+        }
+
+    }
+}
+
+@mixin  keyboardSpecs {
+    ul {
+        h2 {
+            font-family: 'Monrserrant', sans-serif;
+            color: white;
+            font-weight: 600;
+            width: 100%;
+        }
+        li {
+            color: green;
+            font-family: 'Monrserrant', sans-serif;
+            margin: 20px 30px 10px;
+            font-size: 20px;
+            width: 100%;
+        }
+    }
+}
+
+body {
+    background: linear-gradient(60deg, black,rgb(66, 30, 30));
+    overflow-x: hidden;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+
+// Navbar
+
+nav {
+    padding: 15px 80px !important;
+    .navbar-brand {
+       font-size: 25px;
+       color: coral !important;
+       b {
+           font-family: 'Montserrat' sans-serif;
+       }
+    }
+    .navbar-nav {
+        margin-left: auto;
+       .nav-item {
+           margin: 30px !important;
+           font-size: 20px !important;
+           font-family:'Montserrat' ,serif;
+           
+           a {
+               color: burlywood;
+               text-decoration: none !important;
+               &:hover {
+                    color: wheat;
+                    text-decoration: none;
+               }
+           }
+       }
+    }
+
+
+}
+
+nav.fixed {
+    padding: 15px 80px !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    background-color: rgb(85, 54, 54);
+    box-shadow: 0 5px 15px #0c0c0c;
+}
+
+// Home
+
+.images {
+    width: 18rem;
+    height: 18rem;
+    border-radius: 50%;
+}
+
+.aboutInfo1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    padding: 70px;
+     .side1 {
+         width: 55%;
+         margin: 20px 0;
+         .title {
+             font-size: 70px;
+             font-family: 'Monrserrant', sans-serif;
+             color: white;
+         }
+         .description {
+             width: 75%;
+             color: #AAA;
+             margin: 15px 3px 60px;
+             font-size: 20px;
+             font-family: 'Monrserrant', sans-serif;
+         }
+         .buttons {
+             .linkBtn{
+                 background-color: rgb(128, 113, 113);
+                 padding: 17px 40px;
+                 color: green;
+                 font-size: 20px;
+                 text-decoration: none;
+                 font-family: 'Monrserrant', sans-serif;
+                 font-weight: 700;
+                 border-radius: 10px;
+                 &:nth-child(2) {
+                     margin-left: 10px;
+                     background-color: rgb(82, 139, 35);
+                     color: #000;
+                 }
+             }
+         }
+         .socialNet {
+             margin-top: 45px;
+             .links{
+                 padding: 0 30px 0 0;
+                 .nets {
+                     font-size: 35px;
+                     color: white;
+                     &:hover {
+                         color: green;
+                     }
+                 }
+             }
+         }
+     }
+     .side2 {
+
+     }
+}
+
+// Portfolio 
+
+.titles {
+    text-align: center;
+    margin-top: 75px;
+    .title1 {
+        @include PageTitle();
+    }
+    .title2 {
+        @include PageTitle2();
+    }
+}
+
+.row {
+    .col-md-12 {
+        padding-top: 50px;
+        .projectCard {
+            display: flex;
+            justify-content: center;
+            margin: 50px 0;
+            .projectImage {
+                width: 50%;
+            }
+            .projectInfo {
+                margin: 30px 50px;
+                .projectAbout {
+                    .projectName {
+                        color: white;
+                        font-weight: 600;
+                        font-family: 'Monrserrant', sans-serif;
+                    }
+                    .projectPara {
+                        color: #AAA;
+                        margin: 10px 0 50px;
+                        font-family: 'Monrserrant', sans-serif;
+                    }
+                }
+                .projectButtons {
+                    
+                    .nuttons {
+                        
+                        background-color: #2B2B2B;
+                        padding: 17px 35px;
+                        color: white;
+                        font-size: 20px;
+                        text-decoration: none;
+                        border-radius: 10px;
+                        font-family: 'Monrserrant', sans-serif;
+                        font-weight: 500;
+                        svg {
+                            margin: 0 10px 0;
+                        }
+                        &:nth-child(2){
+                            background-color: rgb(82, 139, 35);
+                            color: black;
+                            margin-left: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Setup
+
+.setupMain {
+    .setupImage {
+        display: flex;
+        justify-content: center;
+        img {
+            margin-top: 100px;
+            width: 50%;
+            border-radius: 10px;
+        }
+    }
+    .container {
+        .row {
+            justify-content: center;
+            .col-md-8 {
+                .mySetup{
+                    padding: 50px 75px;
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    .laptopSpecs {
+                        margin-bottom: 40px;
+                        @include laptopSpecs()
+                    }
+                    .keyboardSpecs {
+                        width: 150%;
+                        @include keyboardSpecs()
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// about-me
+
+.info {
+    display: flex;
+    padding: 40px;
+    .myImage {
+        width: 50% !important;
+        height: 50%;
+    }
+    span {
+        
+        .aboutmeText {
+            padding: 0 0 30px 45px;
+            font-size: 23px;
+            width: 95%;
+            color: white;
+            font-family: 'Monrserrant', sans-serif;
+        }
+        div {
+            margin: 30px 0 30px;
+        }
+    }
+}
+
+// about-me
+
+.info {
+    display: flex;
+    padding: 40px;
+    .myImage {
+        width: 50% !important;
+        height: 50%;
+    }
+    span {
+        
+        .aboutmeText {
+            padding: 0 0 30px 45px;
+            font-size: 23px;
+            width: 95%;
+            color: white;
+            font-family: 'Monrserrant', sans-serif;
+        }
+        div {
+            margin: 30px 0 30px;
+        }
+    }
+}
+
+
+// footer
+
+.footer {
+    padding: 20px 0 0 ;
+    border-top: 1px solid #aaa;
+    text-align: center;
+    p {
+        font-size: 17px;
+        color: white;
+        font-family:  'Monrserrant', sans-serif;
+    }
+}
